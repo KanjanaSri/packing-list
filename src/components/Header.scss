@@ -1,0 +1,20 @@
+nav {
+  box-shadow: 5px 7px 30px -5px rgba(0, 0, 0, 0.5);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #212529;
+  z-index: 1;
+
+  .nav-container {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 1.7rem;
+      color: orange;
+      font-family: caveat, sans-serif;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+li {
+  list-style: none;
+  margin: 5px auto;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+i.fa-trash-can {
+  float: right;
+  font-weight: 300;
+  margin-top: 0.2rem;
+}
+
+.text {
+  margin: 0 5px;
+}
+
+input,
+i.fa-trash-can {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(240, 200, 130);
+}
