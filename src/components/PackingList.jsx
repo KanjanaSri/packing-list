@@ -10,6 +10,7 @@ export default function PackingList({
   onClearList,
   children,
 }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [isSorted, setIsSorted] = useState(false);
 
   function filterByCategory(category) {
@@ -21,18 +22,31 @@ export default function PackingList({
     .slice()
     .sort((a, b) => Number(a.packed) - Number(b.packed));
 
+  function handleDeleteAll() {
+    setIsOpen(false);
+    onClearList(category);
+  }
+
   return (
     <div className="category-card">
-      <div className="action">
+      <div className="title-container">
         <span className="card-title">{children}</span>
-        <div>
-          <span onClick={() => onClearList(category)}>
-            <i className="fa-solid fa-circle-xmark"></i>
-          </span>
-          <span onClick={() => setIsSorted(!isSorted)}>
-            <i className="fa-solid fa-sort"></i>
-          </span>
-        </div>
+        <button className="open" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <i className="fa-solid fa-sort-up"></i>
+          ) : (
+            <i className="fa-solid fa-sort-down"></i>
+          )}
+        </button>
+
+        <ul className={`action ${isOpen ? "show" : ""}`}>
+          <li onClick={() => setIsSorted(!isSorted)}>
+            <i className="fa-solid fa-sort"></i>Sort List
+          </li>
+          <li onClick={() => handleDeleteAll()}>
+            <i className="fa-solid fa-ban"></i>Delete All
+          </li>
+        </ul>
       </div>
 
       <ul className="card-text">
