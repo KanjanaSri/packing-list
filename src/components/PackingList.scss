@@ -46,6 +46,7 @@ button.open {
   background: transparent;
   border: none;
   color: rgb(240, 200, 130);
+  cursor: pointer;
 }
 
 .action {
@@ -54,11 +55,12 @@ button.open {
   top: 20px;
   right: -2px;
   display: none;
-  background-color: rgb(69, 72, 74);
+  background-color: rgb(112, 112, 112);
   box-shadow: 5px 7px 20px -5px rgba(0, 0, 0, 0.5);
-  color: #bcbcbc;
+  color: #fcfcfc;
   border-radius: 5px;
-  padding: 5px 7px;
+  padding: 6px 10px;
+  line-height: 1.7;
 }
 
 .action i {
@@ -71,8 +73,8 @@ button.open {
   font-size: 0.8rem;
 }
 .action li:hover {
-  // color: #fff;
   transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 
 .show {

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.scss";
-import Header from "./Header";
-import Form from "./Form";
-import PackingList from "./PackingList";
-import initialItems from "../initialItems";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import PackingList from "./components/PackingList";
+import initialItems from "./initialItems";
 
 export default function App() {
   const [items, setItems] = useState(initialItems);

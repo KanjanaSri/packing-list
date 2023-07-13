@@ -41,7 +41,8 @@ export default function PackingList({
 
         <ul className={`action ${isOpen ? "show" : ""}`}>
           <li onClick={() => setIsSorted(!isSorted)}>
-            <i className="fa-solid fa-sort"></i>Sort List
+            <i className="fa-solid fa-sort"></i>
+            {isSorted ? "Unsorted List" : "Sort List"}
           </li>
           <li onClick={() => handleDeleteAll()}>
             <i className="fa-solid fa-ban"></i>Delete All
